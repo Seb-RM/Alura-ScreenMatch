@@ -4,7 +4,7 @@ public class Peliculas {
 
     int fechaDeLanzamiento;
 
-    int DuracionEnMinutos;
+    int duracionEnMinutos;
 
     boolean incluidoEnElPlan;
 }

@@ -6,15 +6,18 @@ public class Principal {
         miPelicula.fechaDeLanzamiento = 2011;
         miPelicula.duracionEnMinutos = 135;
 
-        System.out.println("Mi película es; "+miPelicula.nombre);
-        System.out.println("Su fecha de Lanzamiento fue: "+miPelicula.fechaDeLanzamiento);
+        miPelicula.muestraFichaTecnica();
+        miPelicula.evalua(8.0);
+        miPelicula.evalua(10);
+
+        System.out.println(miPelicula.sumaDeLasEvaluaciones);
+        System.out.println(miPelicula.totalDeLasEvaluaciones);
+        System.out.println(miPelicula.calculaMedia());
 
         Peliculas otraPelicula = new Peliculas();
         otraPelicula.nombre = "El Descenso";
         otraPelicula.fechaDeLanzamiento = 2003;
         otraPelicula.duracionEnMinutos = 140;
-
-        System.out.println("Mi película es; "+otraPelicula.nombre);
-        System.out.println("Su fecha de Lanzamiento fue: "+otraPelicula.fechaDeLanzamiento);
+//        otraPelicula.muestraFichaTecnica();
     }
 }

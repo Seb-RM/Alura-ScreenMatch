@@ -1,22 +1,20 @@
+import com.aluracursos.screenmacht.modelos.Peliculas;
+
 public class Principal {
     public static void main(String[] args) {
         Peliculas miPelicula = new Peliculas();
 
-        miPelicula.nombre = "Encantados";
-        miPelicula.fechaDeLanzamiento = 2011;
-        miPelicula.duracionEnMinutos = 135;
+        miPelicula.setNombre("Encantados");
+        miPelicula.setFechaDeLanzamiento(2011);
+        miPelicula.setDuracionEnMinutos(135);
+        miPelicula.setIncluidoEnElPlan(true);
 
         miPelicula.muestraFichaTecnica();
         miPelicula.evalua(8.0);
         miPelicula.evalua(10);
+        miPelicula.evalua(7.8);
         System.out.println(miPelicula.getTotalDeLasEvaluaciones());
         System.out.println(miPelicula.calculaMedia());
         System.out.println("******************************");
-
-        Peliculas otraPelicula = new Peliculas();
-        otraPelicula.nombre = "El Descenso";
-        otraPelicula.fechaDeLanzamiento = 2003;
-        otraPelicula.duracionEnMinutos = 140;
-//        otraPelicula.muestraFichaTecnica();
     }
 }

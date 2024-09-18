@@ -1,5 +1,6 @@
 import com.aluracursos.screenmacht.modelos.Peliculas;
 import com.aluracursos.screenmacht.modelos.Serie;
+import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 
 public class Principal {
     public static void main(String[] args) {
@@ -27,5 +28,16 @@ public class Principal {
         casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionEnMinutos());
         System.out.println("******************************");
+
+        Peliculas segundaPelicula = new Peliculas();
+        segundaPelicula.setNombre("Matrix");
+        segundaPelicula.setFechaDeLanzamiento(1998);
+        segundaPelicula.setDuracionEnMinutos(180);
+
+        CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
+        calculadora.incluye(miPelicula);
+        calculadora.incluye(casaDragon);
+        calculadora.incluye(segundaPelicula);
+        System.out.println("Tiempo necesario para ver tus títulos favoritos estas vacaciones: "+calculadora.getTiempoTotal());
     }
 }

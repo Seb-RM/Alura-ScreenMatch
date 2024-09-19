@@ -1,6 +1,8 @@
+import com.aluracursos.screenmacht.modelos.Episodio;
 import com.aluracursos.screenmacht.modelos.Peliculas;
 import com.aluracursos.screenmacht.modelos.Serie;
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
+import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
 
 public class Principal {
     public static void main(String[] args) {
@@ -39,5 +41,17 @@ public class Principal {
         calculadora.incluye(casaDragon);
         calculadora.incluye(segundaPelicula);
         System.out.println("Tiempo necesario para ver tus títulos favoritos estas vacaciones: "+calculadora.getTiempoTotal());
+        System.out.println("******************************");
+
+        FiltroRecomendacion filtroRecomendacion = new FiltroRecomendacion();
+        filtroRecomendacion.filtra(miPelicula);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setNombre("Episodio Número uno");
+        episodio.setSerie(casaDragon);
+        episodio.setTotalVisualizaciones(30);
+
+        filtroRecomendacion.filtra(episodio);
     }
 }

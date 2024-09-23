@@ -4,6 +4,8 @@ import com.aluracursos.screenmacht.modelos.Serie;
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Peliculas miPelicula = new Peliculas();
@@ -53,5 +55,20 @@ public class Principal {
         episodio.setTotalVisualizaciones(30);
 
         filtroRecomendacion.filtra(episodio);
+
+        var peliculaDeBruno = new Peliculas();
+        peliculaDeBruno.setNombre("El seño de los anillos");
+        peliculaDeBruno.setDuracionEnMinutos(180);
+        peliculaDeBruno.setFechaDeLanzamiento(2001);
+
+        ArrayList<Peliculas> listaDePeliculas = new ArrayList<>();
+        listaDePeliculas.add(miPelicula);
+        listaDePeliculas.add(segundaPelicula);
+        listaDePeliculas.add(peliculaDeBruno);
+
+        System.out.println("Tamaño de la lista: "+listaDePeliculas.size());
+        System.out.println("La primera película es: "+listaDePeliculas.get(0).getNombre());
+
+        System.out.println(listaDePeliculas);
     }
 }

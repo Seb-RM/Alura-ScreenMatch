@@ -1,3 +1,5 @@
+package com.aluracursos.principal;
+
 import com.aluracursos.screenmacht.modelos.Episodio;
 import com.aluracursos.screenmacht.modelos.Peliculas;
 import com.aluracursos.screenmacht.modelos.Serie;

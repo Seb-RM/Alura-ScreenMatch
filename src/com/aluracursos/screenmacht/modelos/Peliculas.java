@@ -6,6 +6,10 @@ public class Peliculas extends Titulo implements Clasificacion {
 
     private String director;
 
+    public Peliculas( String nombre){
+
+    }
+
     public String getDirector() {
         return director;
     }

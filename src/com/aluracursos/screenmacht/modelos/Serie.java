@@ -2,6 +2,10 @@ package com.aluracursos.screenmacht.modelos;
 
 public class Serie extends Titulo {
 
+    public  Serie(String nombre, int fechaDeLanzamiento){
+        super(nombre, fechaDeLanzamiento);
+    }
+
     int temporadas;
 
     int episodiosPorTemporada;

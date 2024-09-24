@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Peliculas miPelicula = new Peliculas();
+        Peliculas miPelicula = new Peliculas("Encantados",2011);
 
         miPelicula.setNombre("Encantados");
         miPelicula.setFechaDeLanzamiento(2011);
@@ -23,7 +23,7 @@ public class Principal {
         System.out.println(miPelicula.calculaMedia());
         System.out.println("******************************");
 
-        Serie casaDragon = new Serie();
+        Serie casaDragon = new Serie("La casa del dragón",2022);
         casaDragon.setNombre("La casa del dragón");
         casaDragon.setFechaDeLanzamiento(2022);
         casaDragon.setTemporada(1);
@@ -33,7 +33,7 @@ public class Principal {
         System.out.println(casaDragon.getDuracionEnMinutos());
         System.out.println("******************************");
 
-        Peliculas segundaPelicula = new Peliculas();
+        Peliculas segundaPelicula = new Peliculas("Matrix",1998);
         segundaPelicula.setNombre("Matrix");
         segundaPelicula.setFechaDeLanzamiento(1998);
         segundaPelicula.setDuracionEnMinutos(180);
@@ -56,7 +56,7 @@ public class Principal {
 
         filtroRecomendacion.filtra(episodio);
 
-        var peliculaDeBruno = new Peliculas();
+        var peliculaDeBruno = new Peliculas("El seño de los anillos",2001);
         peliculaDeBruno.setNombre("El seño de los anillos");
         peliculaDeBruno.setDuracionEnMinutos(180);
         peliculaDeBruno.setFechaDeLanzamiento(2001);

@@ -5,6 +5,7 @@ import com.aluracursos.screenmacht.modelos.Serie;
 import com.aluracursos.screenmacht.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalConListas {
 
@@ -28,5 +29,16 @@ public class PrincipalConListas {
                 System.out.println(pelicula.getClasificacion());
             }
         }
+
+        ArrayList<String> listaDeArtistas = new ArrayList<>();
+        listaDeArtistas.add("Penélope Cruz");
+        listaDeArtistas.add("Antonio Banderas");
+        listaDeArtistas.add("Ricardo Darin");
+
+        System.out.println("lista de artistas  no ordenada: "+listaDeArtistas);
+        Collections.sort(listaDeArtistas);
+        System.out.println("lista de artistas ordenada: "+listaDeArtistas);
+
+        System.out.println("lista de títulos ordenada: "+lista);
     }
 }

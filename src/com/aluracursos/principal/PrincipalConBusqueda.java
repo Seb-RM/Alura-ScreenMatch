@@ -8,10 +8,10 @@ import java.net.http.HttpResponse;
 
 public class PrincipalConBusqueda {
 
-    public PrincipalConBusqueda() throws IOException, InterruptedException {
+    public static void main(String args[]) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://openjdk.org/"))
+                .uri(URI.create("https://www.omdbapi.com/?i=tt3896198&apikey=d76964c2"))
                 .build();
 
         HttpResponse<String> response = client

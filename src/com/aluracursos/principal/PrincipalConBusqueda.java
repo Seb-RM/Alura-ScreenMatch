@@ -1,4 +1,5 @@
 package com.aluracursos.principal;
+import com.aluracursos.screenmacht.excepcion.ErrorEnConversionDeDuracionException;
 import com.aluracursos.screenmacht.modelos.Titulo;
 
 import com.aluracursos.screenmacht.modelos.TituloOmdb;
@@ -24,7 +25,10 @@ public class PrincipalConBusqueda {
         System.out.println("Escriba el nombre de una película: ");
         var busqueda = lectura.nextLine();
 
-        String direccion = "https://www.omdbapi.com/?t="+busqueda+"&apikey=d76964c2";
+        String direccion = "https://www.omdbapi.com/?t="+
+                busqueda.replace(" ", "+")+"&apikey=d76964c2";
+        try {
+
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(direccion))
@@ -45,7 +49,19 @@ public class PrincipalConBusqueda {
 
 
         //System.out.println(miTituloOmdb);
-        Titulo miTitulo = new Titulo(miTituloOmdb);
-        System.out.println(miTitulo);
+
+            Titulo miTitulo = new Titulo(miTituloOmdb);
+            System.out.println(miTitulo);
+        } catch (NumberFormatException e) {
+            System.out.println("Ocurrió un error: ");
+            System.out.println(e.getMessage());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error en la URI, verifique la dirección");
+        } catch (ErrorEnConversionDeDuracionException e){
+            System.out.println(e.getMessage());
+        }catch (Exception e) {
+            System.out.println("Ocurrió un error inesperado.");
+        }
+        System.out.println("Finalizó la ejecución del programa!");
     }
 }
